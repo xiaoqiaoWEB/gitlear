@@ -6,6 +6,7 @@ function drag (id){
 		disX = ev.pageX - obj.offsetLeft;
 		disY = ev.pageY - obj.offsetTop;
 		
+<<<<<<< HEAD
 		document.onmousemove=function (ev) {
 			obj.style.left = ev.pageX - disX;
 			obj.style.top = ev.pageY - disY;
