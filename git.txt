@@ -1,0 +1,94 @@
+
+克隆一个库
+git clone [url]
+
+前置贡献者
+name  email
+git config --global user.name "xiaoqiaoWEB"
+git config --global user.email "346043591@qq.com"  //不打 名字 可以查看 
+
+查看 所有 配置
+git config --list
+
+master 主分支
+
+cd 进入目录
+
+git 三个区
+	工作区
+	暂存区
+		-作为过渡层
+		-避免误操作
+		-保护工作区和版本区
+		-分支处理
+	版本区（库）
+
+git status 查看状态
+
+提交
+	add + 文件        		提交到暂存区 
+	add .						全部提交到暂存区
+	commit                 	提交
+	commit -m ""			提交+注释
+	commit -a -m ""        先放到暂存区再放到版本区 + 注释
+	git log 查看提交历史	
+
+对比
+	diff 对比  工作区 和 暂存区
+	diff --cached 对比 暂存区 和版本区
+	diff --staged 同上
+	diff master 工作区跟版本区  对比
+	
+撤销
+	rest HEAD + 文件  从暂存区 回到 工作区
+	checkout -- + 文件    撤销工作区的操作（跟版本区不一样的地方）
+	commit --amend  撤销本次的提交
+	
+删除
+	rm+文件  当删除一个工作区的文件 可以调用   可以删除 暂存区
+	rm -f wenjain 工作区和暂存区 一起
+	rm --cached wenjan 删除暂存区-保留工作区
+
+恢复	
+	checkout id 恢复工作区的文件 -- 指定文件
+	reset --hard id 恢复到之前的版本
+	reset --hard HEAD^ 返回上一个版本
+	reset --hard HEAD`num 返回 第 num 个版本
+	reflog 列出之前的 操作版本
+
+远程同步	
+	remote 查看远程库名称
+	remote -v 查看地址
+	push origin（名称） master(分支)
+	
+多人合作
+同步跟新本地代码
+	fetch  同步
+		diff master origin/master----列出冲突		
+		merge origin/master------在本地修改冲突
+	
+	pull 合并
+
+开源项目协作
+	•	fork
+	•	pull request
+
+git 分支
+	branch  	查看分支
+	branch  name(分支名字)  创建一个 name 的分支
+	checkout  name 切换到name 分支
+	checkout  -b name1  创建一个name1分支并且切换到name1
+	
+	branch  -d   name  删除分支      -----    branch  -D  删除没有合并的分支
+	branch --merged 查看被合并的分支
+	branch  --no-merged 查看没有被合并的分支
+	
+	merge nema  合并name分支
+	
+•	git tag 标签（版本）
+
+	
+
+
+
+
