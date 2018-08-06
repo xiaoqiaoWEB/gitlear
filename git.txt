@@ -1,6 +1,10 @@
 
 克隆一个库
 git clone [url]
+	克隆一个分支 
+		git branch -a 查看远程分支
+		git checkout -b name origin/name
+		git pull
 
 前置贡献者
 name  email
